@@ -20,13 +20,13 @@ jobs:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip
           restore-keys: ${{ runner.os }}-pip
-      - name: Install Black, Pylint & iSort
-        run: python -m pip install black pylint isort
-      - name: Run linters
-        run: |
-          pylint alokka
-          black .
-          isort .          
+#       - name: Install Black, Pylint & iSort
+#         run: python -m pip install black pylint isort
+#       - name: Run linters
+#         run: |
+#           pylint alokka
+#           black .
+#           isort .          
 
   test:
     needs: linter
